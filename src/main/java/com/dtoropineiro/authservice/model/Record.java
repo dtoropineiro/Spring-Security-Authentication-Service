@@ -1,5 +1,6 @@
 package com.dtoropineiro.authservice.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.Builder;
@@ -22,6 +23,7 @@ public class Record {
 
     private LocalDateTime timestamp;
 
+    @JsonBackReference
     @JoinColumn(name = "user_id")
     @ManyToOne(targetEntity = User.class,fetch = FetchType.LAZY)
     private User user;
