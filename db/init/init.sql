@@ -22,6 +22,14 @@ CREATE TABLE user_roles (
 	CONSTRAINT fkhfh9dx7w3ubf1co1vdev94g3f FOREIGN KEY (user_id) REFERENCES users(id)
 );
 
+CREATE TABLE public.record (
+	id serial NOT NULL,
+	"timestamp" timestamp NULL,
+	user_id int8 NULL,
+	CONSTRAINT record_pkey PRIMARY KEY (id),
+	CONSTRAINT fk44ctj7m4iik9qhcbaqt1aynka FOREIGN KEY (user_id) REFERENCES users(id)
+);
+
 INSERT INTO roles(name) VALUES('ROLE_USER');
 INSERT INTO roles(name) VALUES('ROLE_MODERATOR');
 INSERT INTO roles(name) VALUES('ROLE_ADMIN');
