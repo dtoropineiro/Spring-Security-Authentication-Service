@@ -6,39 +6,6 @@
 	},
 	"item": [
 		{
-			"name": "Get",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "localhost:8080",
-					"host": [
-						"localhost"
-					],
-					"port": "8080"
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Hello",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "localhost:8080/hello",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"hello"
-					]
-				}
-			},
-			"response": []
-		},
-		{
 			"name": "Register",
 			"request": {
 				"method": "POST",
@@ -249,6 +216,48 @@
 						"sum",
 						"5",
 						"7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Records",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{accessToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/records/historic",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"records",
+						"historic"
 					]
 				}
 			},
