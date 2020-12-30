@@ -78,7 +78,6 @@
 			<version>2.4.0.RELEASE</version>
 		</dependency>
 
-
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>

@@ -12,7 +12,6 @@ services:
     build:
       context: "."
       dockerfile: "Dockerfile-db"
-    #image: postgres
     ports:
       - "5432:5432"
     environment:
